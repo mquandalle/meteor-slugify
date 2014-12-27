@@ -1,6 +1,6 @@
 Package.describe({
   name: 'yasaricli:slugify',
-  summary: 'Remove all special characters from a string.',
+  summary: 'Remove all special characters from a string meteor packaging.',
   version: '0.0.2',
   git: 'https://github.com/yasaricli/meteor-slugify.git'
 });
