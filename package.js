@@ -1,7 +1,7 @@
 Package.describe({
   name: 'yasaricli:slugify',
   summary: 'Remove special characters from a string',
-  version: '0.0.',
+  version: '0.0.4',
   git: 'https://github.com/yasaricli/meteor-slugify.git'
 });
 
