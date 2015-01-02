@@ -1,14 +1,16 @@
 # Meteor Slugify
 
-Remove all special characters from a string meteor packaging.
+A [Meteor](http://meteor.com) package to remove special characters from a string.
 
-##Install
+## Install
+
 ```shell
 $ meteor add yasaricli:slugify
 ```
 
-##Usage
+## Usage
+
 ```js
 slugify('some string'); // returns some-string
-slugify('some string', '_'); // if you prefer something else then '-' as seperator
+slugify('some string', '_'); // if you prefer something other than '-' as separator
 ```
