@@ -66,7 +66,7 @@ var charMap = {
 };
 
 slugify = function(string, replacement) {
-    replacement = replacement || '-';
+    replacement = replacement == '' ? '' : replacement || '-';
     var result = '';
     for (var i=0; i < string.length; i++) {
         var ch = string[i];
@@ -79,5 +79,5 @@ slugify = function(string, replacement) {
     result = result.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
     result = result.replace(/[-\s]+/g, replacement); // convert spaces
     result.replace("#{replacement}$", ''); // remove trailing separator
-    return result;
+    return result.toLowerCase();
 }
