@@ -67,6 +67,9 @@ var charMap = {
 
 slugify = function(string, replacement) {
     replacement = replacement == '' ? '' : replacement || '-';
+    if (typeof string !== 'string')
+        return '';
+
     var result = '';
     for (var i=0; i < string.length; i++) {
         var ch = string[i];
