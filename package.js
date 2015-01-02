@@ -15,3 +15,13 @@ Package.onUse(function(api, where) {
   api.addFiles('slugify.js', where);
   api.export('slugify');
 });
+
+Package.onTest(function(api, where) {
+  var where = where || ['client', 'server'];
+
+  api.versionsFrom('1.0.2.1');
+  api.use('underscore', where);
+  api.use('tinytest', where);
+  api.use('yasaricli:slugify', where);
+  api.addFiles('tests.js', where);
+});

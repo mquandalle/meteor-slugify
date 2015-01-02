@@ -62,7 +62,8 @@ var charMap = {
     '“': '"', '”': '"', '‘': "'", '’': "'", '∂': 'd', 'ƒ': 'f', '™': 'tm',
     '℠': 'sm', '…': '...', '˚': 'o', 'º': 'o', 'ª': 'a', '•': '*',
     '∆': 'delta', '∞': 'infinity', '♥': 'love', '&': 'and', '|': 'or',
-    '<': 'less', '>': 'greater'
+    '<': 'less', '>': 'greater', '°': '0', '¹': '1', '²' : '2', '³': '3',
+    '@': 'at'
 };
 
 slugify = function(string, replacement) {
@@ -76,7 +77,8 @@ slugify = function(string, replacement) {
         if (charMap[ch]) {
             ch = charMap[ch];
         }
-        ch = ch.replace(/[^\w\s$\*\_\+~\.\(\)\'\"\!\-:@]/g, ''); // allowed
+        console.log(ch)
+        ch = ch.replace(/[^\w\s$\*\_\+~\.\(\)\'\"\-]/g, ''); // allowed
         result += ch;
     }
     result = result.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
